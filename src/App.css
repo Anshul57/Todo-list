@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: #1f4037;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #99f2c8, #1f4037);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100px;
+    width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 6%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header h1 {
+    color: #ffffffdb;
+    font-size: 8vh;
+    font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+.dateAndTIme {
+    color: white;
+    text-align: center;
+    margin-bottom: 4%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    max-width: 500px;
+    width: 400px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    background: #1f4037;
+    color: white;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: all 0.55s ease;
+    
+}
+
+form {
+    margin-bottom: 6%;
+}
+
+.btn {
+    border-radius: 30px;
+    margin-right: 5px;
+}
+
+.btn .bx {
+    font-size: 20px;
+}
+
+.todoList {
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    font-size: 19px;
+    align-items: center;
+    padding: 0.25rem 0.25rem;
+    border-radius: 30px;
+    background: #1f4037;
+}
+
+.btn-m {
+    margin-left: 2rem;
+}
+
+.completed p {
+    color: rgba(245, 245, 245, 0.596);
+    text-decoration: line-through;
+}
+
+.footer {
+    margin-top: 4%;
+    color: white;
+    text-align: center;
+}
+
+/* Hover */
+button:hover {
+    background: white;
+    color: #1f4037;
+    transform: translateX(6px);
+}
+
+.btn-l:hover {
+    transform: translateX(-4px);
+}
+/* media query */
+
+@media (max-width: 721px) {
+    .header h1{
+        font-size: 5vh;
+    }
+
+    .dateAndTIme{
+        font-size: 9px;
+    }
+    
+    input[type="text"] {
+        width: 300px;
+        font-size: 10px;
+    }
+
+    button {
+        font-size: 10px;
+    }
+    .btn button{
+        font-size: 10px;
+    }
+
+    .todoList {
+        font-size: 12px;
+    }
+
+    .btn .bx{
+        font-size: 10px;
+    }
+
+    .footer{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header h1{
+        font-size: 5vh;
+    }
+
+    .dateAndTIme{
+        font-size: 9px;
+    }
+    
+    input[type="text"] {
+        width: 300px;
+        font-size: 10px;
+    }
+
+    button {
+        font-size: 10px;
+    }
+    .btn button{
+        font-size: 10px;
+    }
+
+    .todoList {
+        font-size: 12px;
+    }
+
+    .btn .bx{
+        font-size: 10px;
+    }
+
+    .footer{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1{
+        font-size: 4vh;
+    }
+
+    .dateAndTIme{
+        font-size: 6px;
+    }
+    
+    input[type="text"] {
+        width: 180px;
+        font-size: 8px;
+    }
+
+    button {
+        font-size: 8px;
+    }
+    .btn button{
+        font-size: 8px;
+    }
+
+    .todoList {
+        font-size: 9px;
+    }
+
+    .btn .bx{
+        font-size: 8px;
+    }
+
+    .footer{
+        font-size: 9.5px;
+    }
 }
